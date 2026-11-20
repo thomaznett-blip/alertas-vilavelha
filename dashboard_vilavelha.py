@@ -72,7 +72,7 @@ with col_mapa:
         df_mapa = pd.DataFrame([
             {
                 "lat": inc["coordenadas"][0],
-                "lon": inc["coordenadas"][1]
+                "lon": inc["coordenadas"][1],
                 "Bairro": inc["bairro"],
                 "Risco": inc["fator_risco_topografico"],
                 "Confirmações": inc.get("confirmacoes", 1)
