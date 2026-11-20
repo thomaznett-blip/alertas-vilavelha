@@ -3,8 +3,8 @@ import datetime
 import json
 import os
 import unicodedata
-from core.parser_incidentes import ParserIncidentes
-from core.geofencing import ResolvedorGeofencing
+from parser_incidentes import ParserIncidentes
+from geofencing import ResolvedorGeofencing
 
 BAIRROS_VILA_VELHA = {
     "cobilandia": {"nome": "Cobilândia", "altitude": 1.2, "multiplicador": 1.5, "bacia": "Canal de Guaranhuns", "lat": -20.3456, "lon": -40.3890},
