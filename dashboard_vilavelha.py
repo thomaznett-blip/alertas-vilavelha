@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from core.gerenciador_alertas import GerenciadorAlertasComunitarios, BAIRROS_VILA_VELHA
+from gerenciador_alertas import GerenciadorAlertasComunitarios, BAIRROS_VILA_VELHA
 
 st.set_page_config(page_title="Monitoramento Vila Velha - ThomasInfoTech", layout="wide")
 
@@ -71,8 +71,8 @@ with col_mapa:
     if sistema.historico_incidentes:
         df_mapa = pd.DataFrame([
             {
-                "lat": inc["coordenadas"],
-                "lon": inc["coordenadas"],
+                "lat": inc["coordenadas"][0],
+                "lon": inc["coordenadas"][1]
                 "Bairro": inc["bairro"],
                 "Risco": inc["fator_risco_topografico"],
                 "Confirmações": inc.get("confirmacoes", 1)
